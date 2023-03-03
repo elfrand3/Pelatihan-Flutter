@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-// import 'Detail.dart';
-// import 'adddata.dart';
+import 'detaildata.dart';
+import 'adddata.dart';
 import 'homepage.dart';
 
 class Home extends StatefulWidget {
@@ -49,17 +49,17 @@ class _HomeState extends State<Home> {
           SizedBox(
             width: 20,
           ),
-          //SizedBox(height: 10,),
-          // FloatingActionButton.extended(
-          //   heroTag: "add data",
-          //   onPressed: () {
-          //     Navigator.of(context).pushReplacement(new MaterialPageRoute(
-          //         builder: (BuildContext context) => new AddData()));
-          //   },
-          //   label: const Text('Tambah Data'),
-          //   icon: const Icon(Icons.add_box),
-          //   backgroundColor: Colors.pink,
-          // ),
+          SizedBox(height: 10,),
+          FloatingActionButton.extended(
+            heroTag: "add data",
+            onPressed: () {
+              Navigator.of(context).pushReplacement(new MaterialPageRoute(
+                  builder: (BuildContext context) => new AddData()));
+            },
+            label: const Text('Tambah Data'),
+            icon: const Icon(Icons.add_box),
+            backgroundColor: Colors.pink,
+          ),
         ],
       ),
       body: new FutureBuilder<List>(
@@ -90,13 +90,13 @@ class ItemList extends StatelessWidget {
         return new Container(
           padding: const EdgeInsets.all(10.0),
           child: new GestureDetector(
-            // onTap: () =>
-            //     Navigator.of(context).pushReplacement(new
-            //     MaterialPageRoute(
-            //         builder: (BuildContext context) => new Detail(
-            //           list: list,
-            //           index: i,
-            //         ))),
+            onTap: () =>
+                Navigator.of(context).pushReplacement(new
+                MaterialPageRoute(
+                    builder: (BuildContext context) => new Detail(
+                      list: list,
+                      index: i,
+                    ))),
             child: new Card(
               child: new ListTile(
                 title: new Text(
