@@ -59,8 +59,8 @@ class _LoginFormState extends State<LoginForm> {
                   width: double.infinity,
                   child: new ElevatedButton(
                     onPressed: () {
-                      if (controllerusername.value.text == 'admin' &&
-                          controllerpassword.value.text == 'admin') {
+                      if (controllerusername.value.text == 'frand' &&
+                          controllerpassword.value.text == 1) {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
                           return HomePage();
